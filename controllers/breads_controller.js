@@ -6,7 +6,14 @@ const bread = require('../models/bread.js')
 breads.get('/', (req, res) => {
   res.send('breads')
 })
-
+// INDEX
+breads.get('/', (req, res) => {
+    res.render('index'),
+    {
+        breads: Bread
+      }
+  // res.send(Bread)
+})
 
 
 // SHOW

@@ -18,6 +18,8 @@ app.engine('jsx', require('express-react-views').createEngine())
 // MIDDLEWARE
 app.use(express.urlencoded({extended: true}))
 
+// MIDDLEWARE
+//app.use(methodOverride('_method'))
 
  
 // ROUTES
@@ -34,6 +36,10 @@ app.use('/breads', breadsController)
 app.get('*', (req, res) => {
   res.send('404')
 })
+
+// DEPENDENCIES
+//const methodOverride = require('method-override')
+
 
 // LISTEN
 app.listen(PORT, () => {
